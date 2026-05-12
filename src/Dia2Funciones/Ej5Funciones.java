@@ -15,6 +15,14 @@ Nota: Segundos iniciales 90090 => 1 día, 1 hora, 1 minuto y 30 segundos
       /*  int segundos = 30000;
         ejercicio5(segundos);
 */
+
+
+        //Opcion2, con varias funciones
+        int segundosIniciales = 90090;
+        int segundosSobrantes= calculaDias(segundosIniciales);
+        segundosSobrantes= calculaHoras(segundosSobrantes);
+        segundosSobrantes = calculaMinutos(segundosSobrantes);
+        System.out.println("Segundos: "+segundosSobrantes);
     }
 
 
@@ -35,4 +43,24 @@ Nota: Segundos iniciales 90090 => 1 día, 1 hora, 1 minuto y 30 segundos
     }
 
 
+    //Funcion que recibe segundos, muestra cuantos días completos salen y devuelve los segundos que sobran
+    public static int calculaDias(int segundos){
+        int dias = segundos/86400;
+        System.out.println("Dias: "+dias);
+        return segundos%86400;
+    }
+
+    //Funcion que recibe segundos, muestra cuantas horas completas salen y devuelve los segundos que sobran
+    public static int calculaHoras(int segundos){
+        int horas = segundos/3600;
+        System.out.println("Horas: "+horas);
+        return segundos%3600;
+    }
+
+    //Funcion que recibe segundos, muestra cuantos minutos completos salen y devuelve los segundos que sobran
+    public static int calculaMinutos(int segundos){
+        int minutos = segundos/60;
+        System.out.println("Minutos: "+minutos);
+        return segundos%60;
+    }
 }
