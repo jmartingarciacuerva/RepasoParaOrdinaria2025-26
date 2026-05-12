@@ -11,18 +11,21 @@ Nota: Segundos iniciales 90090 => 1 día, 1 hora, 1 minuto y 30 segundos
 
 
     public static void main(String[] args) {
+        // Opcion1, una funcion que muestra todos los datos
         ejercicio5(90090);
-      /*  int segundos = 30000;
-        ejercicio5(segundos);
-*/
 
-
+        System.out.println();
         //Opcion2, con varias funciones
         int segundosIniciales = 90090;
+
         int segundosSobrantes= calculaDias(segundosIniciales);
         segundosSobrantes= calculaHoras(segundosSobrantes);
         segundosSobrantes = calculaMinutos(segundosSobrantes);
         System.out.println("Segundos: "+segundosSobrantes);
+
+        //Solucion en una sola línea, donde unas funciones llaman a otras:
+        System.out.println();
+        System.out.println("Segundos: "+calculaMinutos(calculaHoras(calculaDias(segundosIniciales))));
     }
 
 
