@@ -1,4 +1,4 @@
-package Dia1;
+package Dia1Bucles;
 
 
 import java.util.Scanner;
