@@ -15,6 +15,7 @@ public class EjerciciosRegExp {
     private static void altaAparcamiento(){
         Scanner teclado = new Scanner(System.in);
         String matriculaRegExp="[0-9]{4}[B-DF-HJ-NP-TV-Z]{3}";
+        String matriculaRegExp1="[A-Z]{1,2}-[0-9]{4}-[A-Z]{1,2}";
 /*
         System.out.println("Introduce matricula ");
         String matricula = teclado.nextLine();
@@ -30,13 +31,14 @@ public class EjerciciosRegExp {
             System.out.println("Introduce matricula ");
             matricula = teclado.nextLine();
 
-            if(Pattern.matches(matriculaRegExp,matricula)){
+            if(Pattern.matches(matriculaRegExp,matricula) ||
+            Pattern.matches(matriculaRegExp1,matricula)){
                 System.out.println("Matricula introducida correctamente");
             }else{
                 System.out.println("Matricula Incorrecta. El formato es 1111BBB");
             }
 
-        }while(!Pattern.matches(matriculaRegExp,matricula));
+        }while(!(Pattern.matches(matriculaRegExp,matricula)||Pattern.matches(matriculaRegExp1,matricula)));
 
 
 
