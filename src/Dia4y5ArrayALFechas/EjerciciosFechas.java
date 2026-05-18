@@ -18,7 +18,7 @@ public class EjerciciosFechas {
         //Creamos un formato
         DateTimeFormatter formato = DateTimeFormatter.ofPattern("eee dd MMMM uuuu");
         System.out.println(fechaHoy.format(formato));
-        //System.out.println(fechaNula.format(formato)); //La fecha EXPLOTA
+        //   System.out.println(fechaNula.format(formato)); //La fecha EXPLOTA
 
         //Pedimos una fecha con formato
         Scanner teclado = new Scanner(System.in);
